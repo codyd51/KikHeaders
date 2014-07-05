@@ -1,0 +1,2 @@
+@interface KikUserDefaultsHelperProxy : NSObject
+@end
