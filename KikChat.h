@@ -5,7 +5,8 @@
  * weak_classdump is Freeware by Elias Limneos.
  *
  */
-
+#import "KikUser.h"
+ #import "KikMessage.h"
 
 @interface KikChat : KikManagedObject {
 	int _flags; 
@@ -25,7 +26,7 @@
 @property (nonatomic,retain) KikUser* isTypingUser; 				//@synthesize isTypingUser=_isTypingUser - In the implementation block
 @property (nonatomic,copy) NSString* friendlyDate; 
 @property (assign,nonatomic) int flags; 
-@property (nonatomic,@dynamic,retain) NSDate* dateUpdated; 
+@property (nonatomic,retain) NSDate* dateUpdated; 
 @property (assign,nonatomic) BOOL isGroup; 
 @property (assign,nonatomic) BOOL blockUserAction; 				//@synthesize blockUserAction=_blockUserAction - In the implementation block
 @property (assign,nonatomic) BOOL isDeleted; 
@@ -34,10 +35,10 @@
 @property (assign,nonatomic) BOOL allMembersInRoster; 
 @property (assign,nonatomic) BOOL isLeaving; 
 @property (nonatomic,copy,copy) NSString* chatIdentifier; 
-@property (nonatomic,@dynamic,retain) KikMessage* draftMessage; 
-@property (nonatomic,@dynamic,retain) NSSet* messages; 
-@property (nonatomic,@dynamic,retain) KikMessage* lastMessage; 
-@property (nonatomic,@dynamic,retain) KikUser* user; 
+@property (nonatomic,retain) KikMessage* draftMessage; 
+@property (nonatomic,retain) NSSet* messages; 
+@property (nonatomic,retain) KikMessage* lastMessage; 
+@property (nonatomic,retain) KikUser* user; 
 -(void)setIsGroup:(BOOL)arg1;
 -(void)updateFlagAllMembersInRoster;
 -(void)setHasOnlyBlockedMessages:(BOOL)arg1;
@@ -53,7 +54,6 @@
 -(void)setIsTypingUser:(id)arg1;
 -(id)initWithEntity:(id)arg1 insertIntoManagedObjectContext:(id)arg2;
 -(void)setUser:(id)arg1;
--(void).cxx_destruct;
 -(void)setIsDeleted:(BOOL)arg1;
 -(void)setIsRead:(BOOL)arg1;
 -(void)setFlags:(int)arg1;

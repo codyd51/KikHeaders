@@ -6,8 +6,9 @@
  *
  */
 
-#import <ConversationProvider.h>
-#import <DialogProvider.h>
+#import "ConversationProvider.h"
+#import "DialogProvider.h"
+ #import "KikChat.h"
 
 @interface CoreDataConversation : NSObject <ConversationProvider, DialogProvider> {
 	KikChat* _chat; 
@@ -19,15 +20,14 @@
 @property (copy) NSDate* timestamp; 
 @property (copy) NSArray* participants; 
 @property (copy) NSArray* participantsByUsername; 
-@property (copy) BOOL isTyping; 
-@property (copy) BOOL isGroup; 
-@property (copy) BOOL isBlocked; 
-@property (copy) id<DialogProvider> dialog; 
+@property BOOL isTyping; 
+@property BOOL isGroup; 
+@property BOOL isBlocked; 
+//@property (copy) id<DialogProvider> dialog; 
 @property (copy) NSSet* messages; 
 @property (copy) NSArray* sortedMessages; 
 -(void)addMessages:(id)arg1;
 -(id)initWithKikChat:(id)arg1;
--(void).cxx_destruct;
 -(void)addMessage:(id)arg1;
 -(void)setChat:(id)arg1;
 -(void)addParticipant:(id)arg1;

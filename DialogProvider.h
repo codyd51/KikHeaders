@@ -5,7 +5,7 @@
  * weak_classdump is Freeware by Elias Limneos.
  *
  */
-
+#import "KikMessage.h"
 
 @protocol ConversationProvider
 @property (copy) NSString* jid; 
@@ -14,14 +14,14 @@
 @property (copy) NSDate* timestamp; 
 @property (copy) NSArray* participants; 
 @property (copy) NSArray* participantsByUsername; 
-@property (copy) BOOL isTyping; 
-@property (copy) BOOL isGroup; 
-@property (copy) BOOL isBlocked; 
-@property (copy) id<DialogProvider> dialog; 
+@property BOOL isTyping; 
+@property BOOL isGroup; 
+@property BOOL isBlocked; 
+//@property (copy) id<DialogProvider> dialog; 
 @required
 -(id)jid;
 -(BOOL)isTyping;
--(void)addMessages(id):arg1 ;
+-(void)addMessages:(id)arg1 ;
 -(id)participantsByUsername;
 -(BOOL)isBlocked;
 -(id)participants;
@@ -29,13 +29,13 @@
 -(id)timestamp;
 -(id)title;
 -(BOOL)isGroup;
--(void)addMessage(id):arg1 ;
+-(void)addMessage:(id)arg1 ;
 -(id)lastMessage;
--(void)addParticipant(id):arg1 ;
--(void)removeParticipant(id):arg1 ;
+-(void)addParticipant:(id)arg1 ;
+-(void)removeParticipant:(id)arg1 ;
 -(id)jid;
 -(BOOL)isTyping;
--(void)addMessages(id):arg1 ;
+-(void)addMessages:(id)arg1 ;
 -(id)participantsByUsername;
 -(BOOL)isBlocked;
 -(id)participants;
@@ -43,10 +43,10 @@
 -(id)timestamp;
 -(id)title;
 -(BOOL)isGroup;
--(void)addMessage(id):arg1 ;
+-(void)addMessage:(id)arg1 ;
 -(id)lastMessage;
--(void)addParticipant(id):arg1 ;
--(void)removeParticipant(id):arg1 ;
+-(void)addParticipant:(id)arg1 ;
+-(void)removeParticipant:(id)arg1 ;
 @end
 
 @protocol DialogProvider

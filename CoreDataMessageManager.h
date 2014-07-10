@@ -31,6 +31,5 @@
 -(void)sendContentMessage:(id)arg1 withUserInfo:(id)arg2 andCallback:(id)arg3;
 -(void)sendTextMessage:(id)arg1 withCallback:(id)arg2;
 -(void)sendReadReceiptsForConversation:(id)arg1;
--(void).cxx_destruct;
 -(void)setup;
 @end
